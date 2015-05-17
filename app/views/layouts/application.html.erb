@@ -5,10 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="grey lighten-5">
+  <div class="container">
+    <%= yield %>
+  </div>
 
-  <%= yield %>
   <%= javascript_include_tag 'application' %>
 
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      on_form_submit();
+    });
+  </script>
 </body>
 </html>

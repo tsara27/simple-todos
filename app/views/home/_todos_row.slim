@@ -1,0 +1,20 @@
+.row
+  .col.s4
+    ul.collection.with-header
+      li.collection-header
+        h6.pink-text.text-darken-3 To DOs
+      = form_tag "/api/todos", id: "todo_form", class: "white", remote: true
+        .input-field.col.s12
+          = text_field_tag "todo[text]", "", placeholder: "Add new list"
+          = hidden_field_tag "status", "listed"
+      = render partial: "home/listed", locals: { listed: @listed }
+  .col.s4
+    ul.collection.with-header
+      li.collection-header 
+        h6.pink-text.text-darken-3 Doing
+      li.collection-item Test
+  .col.s4
+    ul.collection.with-header
+      li.collection-header 
+        h6.pink-text.text-darken-3 Done
+      li.collection-item Test
