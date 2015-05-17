@@ -1,4 +1,4 @@
-class Todos
+class Todo
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::TaggableOn
@@ -8,4 +8,5 @@ class Todos
   field :text, type: String
   field :status, type: String
 
+  validates_presence_of [:text, :status]
 end
