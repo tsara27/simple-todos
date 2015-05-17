@@ -15,8 +15,10 @@ Rails.application.routes.draw do
   #   resources :products
 
   namespace :api do
-    resources :todos
+    resources :todos, only: [:create, :update, :destroy]
   end
+
+  resources :home, only: :index
 
   # Example resource route with options:
   #   resources :products do
