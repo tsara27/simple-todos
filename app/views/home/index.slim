@@ -1,9 +1,10 @@
-.todos
-  h1.center.pink-text.text-darken-4 To DOs
-  = render partial: "home/todos_row", locals: { listed: listed, doing: doing, done: done }
+h1.center.pink-text.text-darken-4 To DOs
+= render partial: "home/todos_row", locals: { listed: listed, doing: doing, done: done }
 
 
-  javascript:
-    $(document).ready(function() {
-      on_form_submit();
-    });
+javascript:
+  $(document).ready(function() {
+    on_form_submit();
+    move_to_doing();
+    $('.tooltipped').tooltip({delay: 20});
+  });
