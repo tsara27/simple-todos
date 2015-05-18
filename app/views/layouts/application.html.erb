@@ -5,10 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 </head>
 <body class="grey lighten-5">
   <div class="container">
-    <%= yield %>
+    <div class="todos">
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>
