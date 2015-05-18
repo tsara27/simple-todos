@@ -1,6 +1,6 @@
 .todos
   h1.center.pink-text.text-darken-4 To DOs
-  = render "todos_row"
+  = render partial: "home/todos_row", locals: { listed: listed, doing: doing, done: done }
 
 
   javascript:
