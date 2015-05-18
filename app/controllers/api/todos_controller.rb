@@ -1,6 +1,5 @@
 class Api::TodosController < ApiController
 
-
   def create
     todo = Todo.create!(todo_params)
     render json: todo.to_json, status: 200
