@@ -12,6 +12,16 @@ class Api::TodosController < ApiController
     render json: todo.to_json, status: 200
   end
 
+  def destroy
+    
+  end
+
+  def destroy_all
+    todo = Todo.where(status: params[:status])
+    todo.destroy
+    render json: {}, status: 204
+  end
+
   private
 
   def todo_params
