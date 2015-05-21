@@ -20,6 +20,11 @@
     ul.collection.with-header.z-depth-1
       li.collection-header 
         h6.pink-text.text-darken-3 Done
-        small = "#{pluralize(done.count, 'item')} on Done"
+        .row
+          .col.s6
+            small = "#{pluralize(done.count, 'item')} on Done"
+          .col.s6.right-align
+            small
+              = link_to "Clear All", "#", class: "pink-text text-darken-4", id: "clear-all-done"
       = render partial: "home/done", locals: { done: done }
 
