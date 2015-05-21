@@ -18,3 +18,10 @@ function move_to_doing() {
   });
 };
 
+function clear_when_deletion() {
+  $('.deletion').bind('ajax:success', function(data, status, xhr) {
+    get_home_html();
+    $(".toast").remove();
+  });
+};
+
