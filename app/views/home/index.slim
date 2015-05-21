@@ -7,4 +7,7 @@ javascript:
     on_form_submit();
     move_to_doing();
     $('.tooltipped').tooltip({delay: 20});
+    $("#clear-all-done").click(function(){
+      Materialize.toast('<span>Are you sure?</span><a class="btn-flat yellow-text deletion" href="#{destroy_all_api_todos_path(status:"done")}" onclick="clear_when_deletion();" data-remote="true" data-method="delete">&nbspYes</a>', 5000);
+    });
   });
