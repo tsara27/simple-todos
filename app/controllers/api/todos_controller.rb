@@ -13,7 +13,9 @@ class Api::TodosController < ApiController
   end
 
   def destroy
-    
+    todo = Todo.find(params[:id])
+    todo.destroy
+    render json: {}, status: 204
   end
 
   def destroy_all

@@ -25,3 +25,9 @@ function clear_when_deletion() {
   });
 };
 
+function refresh_when_remove() {
+  $('.delete-list').bind('ajax:success', function(data, status, xhr) {
+    get_home_html();
+  });
+};
+
