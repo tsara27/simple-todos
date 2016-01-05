@@ -1,5 +1,4 @@
 class HomePresenter
-
   def listed
     Todo.listed
   end
@@ -11,5 +10,4 @@ class HomePresenter
   def done
     Todo.done
   end
-  
 end

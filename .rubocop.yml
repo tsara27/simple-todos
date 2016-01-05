@@ -1,0 +1,4 @@
+Style/IfUnlessModifier:
+  MaxLineLength: 80
+Documentation:
+  Enabled: false

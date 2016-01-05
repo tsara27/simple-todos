@@ -10,8 +10,7 @@ class Todo
 
   validates_presence_of [:text, :status]
 
-  scope :listed, -> { where(status: "listed") }
-  scope :doing, -> { where(status: "doing") }
-  scope :done, -> { where(status: "done") }
-
+  scope :listed, -> { where(status: 'listed') }
+  scope :doing, -> { where(status: 'doing') }
+  scope :done, -> { where(status: 'done') }
 end
