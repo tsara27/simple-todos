@@ -16,7 +16,7 @@
       = render partial: "home/listed", locals: { listed: listed }
   .col.s4
     ul.collection.with-header.z-depth-1
-      li.collection-header 
+      li.collection-header
         h6.pink-text.text-darken-3 Doing
         .row
           .col.s6
@@ -28,7 +28,7 @@
 
   .col.s4
     ul.collection.with-header.z-depth-1
-      li.collection-header 
+      li.collection-header
         h6.pink-text.text-darken-3 Done
         .row
           .col.s6
@@ -37,4 +37,3 @@
             small
               = link_to "Clear All", "#", class: "pink-text text-darken-4", id: "clear-all-done"
       = render partial: "home/done", locals: { done: done }
-

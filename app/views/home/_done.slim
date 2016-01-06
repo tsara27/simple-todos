@@ -1,5 +1,5 @@
 - unless done.count.zero?
-  - done.each do |item| 
+  - done.each do |item|
     li.collection-item
       = link_to '<i class="mdi-navigation-close grey-text" id="move_to_doing"></i>'.html_safe, api_todo_path(item), class: "tooltipped delete-list", data: { remote: true, tooltip: "Remove", delay: 10 }, method: :delete
       = item.text

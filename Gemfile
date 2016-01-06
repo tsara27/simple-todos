@@ -17,6 +17,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'spring'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 gem 'pry-rails', :group => :development
